@@ -32,6 +32,11 @@ const questions = [
     options: ["Bhubaneswar", "New Delhi", "Panaji", "Mumbai"],
     correctAnswer: "New Delhi",
   },
+  {
+    question: "What is the capital of America?",
+    options: ["Newyork", "Washington DC", "Texas", "Berlin"],
+    correctAnswer: "Washington DC",
+  },
 ];
 
 shuffleArray(questions);
