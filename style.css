@@ -23,7 +23,7 @@ body {
 
 .timer {
     font-size: 24px;
-    color: #007bff;
+    color: #ff0000;
     margin-bottom: 10px;
 }
 
@@ -39,8 +39,21 @@ body {
 .progress-bar {
     height: 100%;
     width: 100%;
-    background-color: #007bff;
+    background-color: #ff0000;
     animation: countdown ease-in-out 20s;
+}
+
+.progressContainer {
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.progressBar {
+    height: 10px;
+    background-color: #007bff;
+    border-radius: 5px;
 }
 
 @keyframes countdown {

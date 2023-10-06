@@ -42,6 +42,7 @@ const questions = [
 shuffleArray(questions);
 
 const quizContainer = document.getElementById("quiz");
+const progressContainer = document.getElementById("progress");
 const resultsContainer = document.getElementById("results");
 const submitButton = document.getElementById("submit");
 const nextButton = document.getElementById("next");
@@ -87,8 +88,19 @@ function resetTimer() {
   timerContainer.innerText = `Time remaining: ${timeRemaining} seconds`;
 }
 
+function updateProgress() {
+  progressContainer.innerHTML = `            
+            <div class="progressContainer">
+                <div class="progressBar" id="progress-bar-${currentQuestion}"></div>
+            </div>
+    `;
+  const progress = ((currentQuestion + 1) / questions.length) * 100;
+  progressContainer.style.width = `${progress}%`;
+}
+
 function buildQuiz() {
   startTimer();
+  updateProgress();
   const question = questions[currentQuestion];
   const questionDiv = document.createElement("div");
   questionDiv.classList.add("question");
@@ -178,5 +190,3 @@ function restartQuiz() {
 }
 
 buildQuiz();
-
-
